@@ -1,0 +1,45 @@
+<!-- 个人信息 -->
+<view class="top">
+    <view class="userInfo">
+        <view class="nickName">{{userInfo.nickName}}</view>
+        <view class="fontcolor">
+            <text class="register" bindtap="switchToRegister">注册账号</text>
+            <text class="login" bindtap="switchToLogin"> 立即登录</text>
+        </view>
+    </view>
+    <image src="{{userInfo.avatarUrl}}"></image>
+</view>
+
+<!-- 订单状态tab栏，包括全部订单、已消费、待消费、预定中 -->
+<view class="nav">
+    <view class="{{currentIndex == index ? 'navTab' : ''}}" wx:for="{{navTabData}}" wx:key="*this" data-inx="{{index}}" bindtap="getOrderData">{{item}}{{currentIndex == index ? '('+orderData.length+')' : ''}}</view>
+</view>
+
+<!-- 展示订单：项目图片（图片表）、项目名称（项目表）、商家名称（商家表）、项目价格（项目表）、商家营业时间（商家表） 订单表 -->
+<view class="order">
+    <view class="orderItem" wx:for="{{orderData}}">
+      <!-- 显示订单图片 -->
+      <image src="{{'http://42.193.5.185:8080/swust/img/' + item.project.image.imageurl}}"></image>
+
+      <view class="orderInfo" bindtap="getOrdererDetail" data-id="{{item.id}}">
+        <!-- 显示订单名字 -->
+        <view>{{item.proname}}</view>
+
+        <!-- 显示商家名字 -->
+        <view>{{item.project.business.busname}}</view>
+        
+        <!-- 显示订单价格 -->
+        <view class="price">价格：{{item.project.proprice}}元</view>
+
+        <!-- 商家的服务时间 -->
+        <view class="time">{{item.project.business.servertime}}</view>
+      </view>
+      
+      <view>
+        <view class="deleteButton" bindtap="delete" data-id="{{item.id}}">
+            <text class="shanchu">删除</text>
+        </view>
+      </view>
+
+    </view>
+</view>

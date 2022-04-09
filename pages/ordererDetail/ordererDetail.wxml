@@ -1,0 +1,23 @@
+<!-- 预约项目的基本信息 -->
+<view class="orderedInfo">
+    <view class="name">项目名称:
+        <text class="content">{{ordererDetail.proname}}</text>
+    </view>
+
+    <view class="name">预约时间:
+        <text class="content">{{ordererDetail.makedate}}</text>
+    </view>
+
+    <view class="name">预约人的姓名：
+        <text class="content">{{ordererDetail.username}}</text>
+    </view>
+
+    <view class="name">预约人的电话：
+        <text class="content">{{ordererDetail.usertell}}</text>
+    </view>
+
+    <view class="name">备注信息：
+        <text class="content">{{ordererDetail.information}}</text>
+    </view>
+
+</view>

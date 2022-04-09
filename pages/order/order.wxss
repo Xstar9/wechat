@@ -1,0 +1,69 @@
+/* pages/order/order.wxss */
+image{
+    width: 100%;
+}
+
+.busInfo{
+    padding: 0 20rpx;
+    margin-top: 30rpx;
+    font-weight: bold;
+}
+
+.name{
+    margin-top: 15rpx;
+}
+
+.content{
+    color: orange;
+}
+
+.TimeAndDate{
+   margin-top: 40rpx;
+   padding: 0 20rpx;
+   display: flex; 
+   justify-content: space-between;
+}
+
+.section{
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    width: 50rpx;
+    height: 50rpx;
+}
+
+picker{
+    border: 1px solid #999;
+    margin-left: 10rpx;
+    padding: 5rpx 10rpx;
+    border-radius: 10rpx;
+    width: 240rpx;
+}
+
+.orderForm input{
+    border: 1px solid #999;
+    padding: 5rpx 10rpx;
+    margin-top: 10rpx;
+    border-radius: 10rpx;
+}
+
+.orderForm{
+    padding: 0 40rpx;
+    margin-top: 40rpx;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.formItem{
+    margin-top: 15rpx;
+}
+
+.btn{
+    color: #fff;
+    background-color: rgb(235, 156, 10);
+    margin: 40rpx 0rpx;
+}

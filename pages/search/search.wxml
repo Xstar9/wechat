@@ -1,0 +1,42 @@
+<view class='search'>
+  <!-- <form catchsubmit="handleSearch"> -->
+    <view class="searchbox">
+      <view>
+        <icon type="search" size="20" class='search_icon'></icon>
+        <input type='text'  placeholder='请输入您要搜索的内容' value="{{proname}}" bindinput='handleInputChange' bindconfirm="handleSearch" name="searchKey">
+        <image src='/img/clean.png' class='cancle_btn'  bindtap='clean'></image>
+        </input>
+        
+      </view>
+      <!-- <view>
+        <button  class='ic' formType="submit">搜索</button>
+      </view>-->
+    </view> 
+  <!-- </form> -->
+
+  <view wx:for="{{searchResult}}"  wx:key='*this' class='lists' 
+        data-imageid="{{item.imageid}}" 
+        bindtap="handleItemTap">
+    <text >{{item.proname}}</text>
+</view>
+  
+  <view class="history" wx:if="{{history}}">
+      <view class="history_title">
+        <text style="font-weight: bold; color: black;">历史搜索</text>
+        <image src="/img/deleteAll.png" mode="widthFix" style="width:6%;" bindtap="remove"></image>
+      </view>
+      <view>
+        <view style="text-align: center; color: rgba(128, 128, 2128, 1);" wx:if="{{historyArray.length==0}}">暂无搜索记录
+        </view>
+        <view class="history_text">
+          <text wx:for="{{historyArray}}" wx:key="key" data-text="{{item}}" bindtap="textfz">{{item}}</text>
+        </view>
+      </view>
+  </view>
+
+  <view class="none" wx:if="{{noneview}}">
+    <image mode="widthFix" src="/img/skill_icon.png"  style="width:30%"></image>
+    <text>抱歉，没有相关项目</text>
+  </view>
+
+</view>

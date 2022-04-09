@@ -1,0 +1,29 @@
+/* pages/register/register.wxss */
+.formItem{
+    display: flex;
+    /* 垂直居中 */
+    align-items: center;
+    /* 水平居中 */
+    justify-content: center;
+}
+
+/* 设置输入框样式 */
+.formItem input{
+    border: 1px solid #999;
+    /* 内边距 */
+    padding: 10rpx 15rpx;
+    /* 外边距 */
+    margin-top: 40rpx;
+}
+
+.wapper{
+    padding: 0 20rpx;
+    margin-top: 40rpx;
+}
+
+.btn{
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+    margin-top: 40rpx;
+}

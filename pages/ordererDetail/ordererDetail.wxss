@@ -1,0 +1,14 @@
+.orderedInfo{
+    padding: 0 20rpx;
+    margin-top: 30rpx;
+    font-weight: bold;
+}
+
+.name{
+    margin-top: 15rpx;
+}
+
+.content{
+    color: orange;
+}
+

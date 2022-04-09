@@ -1,0 +1,56 @@
+<!--pages/order/order.wxml-->
+<!-- 展示图片 -->
+<image src="{{'http://42.193.5.185:8080/swust/img/' + busInfo.image.imageurl}}"></image>
+
+<!-- 商家的基本信息 -->
+<view class="busInfo">
+    <view class="name">商家名称:
+        <text class="content">{{busInfo.business.busname}}</text>
+    </view>
+    <view class="name">项目名称:
+        <text class="content">{{busInfo.proname}}</text>
+    </view>
+    <view class="name">服务时间:
+        <text class="content">{{busInfo.business.servertime}}</text>
+    </view>
+</view>
+
+<!-- 选择时间和日期 -->
+<view class="TimeAndDate">
+  <!-- 日期 -->
+  <view class="section">
+    <image src="/img/date.png" class="icon"></image>
+    <picker mode="date" value="{{date}}" start="1900-01-01" end="2099-12-31" bindchange="bindDateChange">
+      <view class="picker">{{date}}</view>
+    </picker>
+  </view>
+
+  <!-- 时间 -->
+  <view class="section">
+    <image src="/img/time.png" class="icon"></image>
+    <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+      <view class="picker">{{time}}</view>
+    </picker>
+  </view>
+</view>
+
+<!-- 表单 -->
+<view class="orderForm">
+  <form catchsubmit="formSubmit">
+    <view class="formItem">
+      <view class="title">预约人的姓名：</view>
+      <input type="text" name="username" placeholder="请输入姓名"></input>
+    </view>
+
+    <view class="formItem">
+      <view class="title">预约人的电话：</view>
+      <input type="text" name="phone" placeholder="请输入电话"></input>
+    </view>
+
+    <view class="formItem">
+      <view class="title">备注信息：</view>
+      <input type="text" name="information" placeholder="请输入备注信息"></input>
+    </view>
+    <button style="width: 80%;" class="btn" formType="submit">确认</button>
+  </form>
+</view>

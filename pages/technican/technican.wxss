@@ -1,0 +1,18 @@
+/* pages/technican/technican.wxss */
+.page{
+    height: 100%;
+}
+
+.tec{
+    padding: 0 20rpx;
+}
+
+.tec image{
+    width: 100%;
+}
+
+.tecInfo{
+    border: 1px solid orange;
+    margin-top: 20rpx;
+    box-shadow: 2px 2px 2px orange;
+}

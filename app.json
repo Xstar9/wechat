@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/start/start",
+    "pages/index/index",
+    "pages/technican/technican",
+    "pages/my/my",
+    "pages/register/register",
+    "pages/login/login",
+    "pages/proDetail/proDetail",
+    "pages/order/order",
+    "pages/search/search",
+    "pages/ordererDetail/ordererDetail",
+    "pages/proSort/proSort"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/img/index_icon.png",
+        "selectedIconPath": "/img/index_icon_HL.png"
+      },
+      {
+        "pagePath": "pages/technican/technican",
+        "text": "技师",
+        "iconPath": "/img/skill_icon.png",
+        "selectedIconPath": "/img/skill_icon_HL.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/img/user_icon.png",
+        "selectedIconPath": "/img/user_icon_HL.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

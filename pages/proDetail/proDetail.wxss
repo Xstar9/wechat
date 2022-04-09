@@ -1,0 +1,42 @@
+/* pages/proDetail/proDetail.wxss */
+image{
+    width: 100%;
+}
+
+.proInfo{
+    padding: 0 20rpx;
+    margin-top: 40rpx;
+    border-bottom: 1px solid #999;
+    padding-bottom: 20rpx;
+}
+
+.proname{
+    font-weight: bold;
+    font-size: 36rpx;
+}
+
+.proprice{
+    font-weight: bold;
+    font-size: 36rpx;
+    /* 价格显示距离左边的项目名字有70rpx */
+    margin-left: 70rpx;
+    color: rgb(199, 93, 7);
+}
+
+.proexplain{
+    color: #999;
+    font-size: 32rpx;
+    margin-top: 25rpx;
+}
+
+.prostep{
+    padding: 0 20rpx;
+    margin-top: 40rpx;
+}
+
+.btn{
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+    margin: 30rpx 0;
+}

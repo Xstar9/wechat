@@ -1,0 +1,63 @@
+<!-- bindscrolltolower:滚动到底部/右边时触发,输出下一页 -->
+<scroll-view scroll-y="true" style="height: 100%;" bindscrolltolower="lower">
+
+<!-- 搜索框 -->
+  <view class='search' bindtap="toSearch"> 
+  <input type='text' 
+  		 placeholder='请输入您要搜索的内容'
+         bindinput='input' 
+         bindconfirm='confirm'/>
+  <icon type='search' class='icons'></icon>
+</view>
+
+<!-- 实现轮播图 -->
+<!-- 遍历容器bannerData -->
+<swiper indicator-dots="{{true}}"
+        autoplay="{{true}}" interval="{{3000}}" duration="{{500}}">
+        <block wx:for="{{bannerData}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}"></view>
+            <image src="{{'http://42.193.5.185:8080/swust/img/'+item.imageurl}}"></image>
+          </swiper-item>
+        </block>
+</swiper>
+
+<!-- 实现导航栏 -->
+<view class="nav">
+  <!-- 循环导航栏的内容 -->
+  <view class="navItem" wx:for="{{navData}}" wx:key="*this" bindtap="toProSort" data-id="{{item.id}}">
+    <!-- 显示导航栏图片 -->
+    <image src="{{'http://42.193.5.185:8080/swust/img/'+item.imageurl}}"></image>
+    <!-- 显示导航栏标题文字 -->
+    <view>{{item.imagetitle}}</view>
+  </view>
+</view>
+
+<!-- 项目详情展示分类 -->
+<view class="pros">
+  <!-- 对项目绑定点击事件，点击之后通过id进入各自的详情页面 -->
+  <view class="proItem" wx:for="{{proData}}" wx:key="*this" bindtap="toProDetail" data-id="{{item.id}}">
+    <!-- 项目图片展示 -->
+    <image src="{{'http://42.193.5.185:8080/swust/img/'+item.image.imageurl}}"></image>
+    <view class="proInfo">
+      <view>
+        <!-- 项目名 -->
+        <view class="proname">{{item.proname}}</view>
+
+        <!-- 项目价格 -->
+        <view class="proprice">价格：{{item.proprice}}</view>
+        
+        <!-- 项目描述 -->
+        <view class="proexplain">{{item.proexplain}}</view>
+      </view>
+    
+      <view class="proButton">预约</view>
+    </view>
+  </view>
+
+  <view class="isData">
+    <view wx:if="{{isData}}">正在加载数据。。。</view>
+    <view wx:else>已经到底了。</view>
+  </view>
+</view>
+</scroll-view>

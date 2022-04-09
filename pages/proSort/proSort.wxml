@@ -1,0 +1,28 @@
+<!--pages/proSort/proSort.wxml-->
+<scroll-view scroll-y="true" style="height: 100%;"  bindscrolltolower="lower">
+  <!-- 第一部分分类说明 -->
+  <view class="tuijian">
+    <image src="/img/tuijian.jpg"></image>
+  </view>
+  <view class="info">
+    <text class="infotext">{{text}}</text>
+  </view>
+  <!-- 第二部分项目详情展示 -->
+  <view class="pros">
+    <block wx:for="{{proSortData}}" wx:key="*this" bindtap="toProDetail" data-id="{{item.id}}">
+      <view class="proItem">
+        <image src="{{'http://42.193.5.185:8080/swust/img/'+item.image.imageurl}}"></image>
+        <view class="proInfo">
+          <view>
+            <view class="proname">{{item.proname}}</view>
+            <view class="proexplain">{{item.proexplain}}</view>
+            <view class="proprice">价格：{{item.proprice}}</view>
+          </view>
+        </view> 
+     </view>
+    </block>
+  </view>
+  <view class="isData">
+      <view>我也是有底线的</view>
+    </view>
+</scroll-view>

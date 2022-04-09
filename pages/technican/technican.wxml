@@ -1,0 +1,8 @@
+<!--pages/technican/technican.wxml-->
+<view class="tec">
+  <view class="tecInfo" wx:for="{{tecData}}">
+    <image src="{{'http://42.193.5.185:8080/swust/img/' + item.imageurl}}"></image>
+    <view>{{item.techname}}</view>
+    <view style="color: #999">{{item.techexplain}}</view>
+  </view>
+</view>
